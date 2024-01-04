@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="container">
+        <h1>SWAPI Interface</h1>
+        <div className="input-group mb-3">
+          <input type="text" className="form-control" id="endpointInput" placeholder="Enter SWAPI endpoint" />
+          <button className="btn btn-primary" id="submitBtn">Submit</button>
+        </div>
+        <div id="resultContainer">
+          {/* Results will be displayed here */}
+        </div>
+        <div id="spinner" className="d-none">
+          <div className="spinner-border" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
   );
-}
+};
 
 export default App;
+
